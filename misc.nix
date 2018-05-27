@@ -14,6 +14,7 @@
     longitude = "-83.34";
   };
   
+  # Enable ZSH and setup themes.
   programs.zsh = {
     enable = true;
     syntaxHighlighting.enable = true;
