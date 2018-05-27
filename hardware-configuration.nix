@@ -21,6 +21,11 @@
     { device = "/dev/disk/by-uuid/ECE7-7C01";
       fsType = "vfat";
     };
+  
+  fileSystems."/mnt/MassStorage" =
+    { device = "/dev/disk/by-uuid/a15d61ec-90a4-49bf-95cd-cd024c876dac";
+      fsType = "ext4";
+    };
 
   swapDevices = [ ];
 

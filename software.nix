@@ -12,6 +12,7 @@
   # Install software.
   environment.systemPackages = with pkgs; [
     # Extra software
+    anydesk
     atom
     cura
     discord
@@ -23,17 +24,24 @@
     # Utilities
     ark
     firefox
-    gimp
     kate
+    kdenlive
+    kdesu
+    krita
+    libreoffice
     neofetch
     spectacle
     vlc
 
     # Core Software
+    ffmpeg-full
+    frei0r
     git
     openjdk8
+    python3
     unzip
     wget
     wineStaging
+    atftp
   ];
 }
