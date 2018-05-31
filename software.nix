@@ -24,12 +24,17 @@
     # Utilities
     ark
     firefox
+    gimp
+    inkscape
     kate
     kdenlive
     kdesu
     krita
+    latte-dock
     libreoffice
     neofetch
+    papirus-icon-theme
+    plasma-vault
     spectacle
     vlc
 
