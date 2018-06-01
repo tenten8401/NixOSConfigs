@@ -20,6 +20,7 @@
     minecraft
     spotify
     steam
+    vscode
     
     # Utilities
     ark
