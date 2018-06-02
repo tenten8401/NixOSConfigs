@@ -2,10 +2,14 @@
 #        MISC. SECTION         #
 ################################
 
+{ config, pkgs, ... }:
 {
   # Allow automatic updating & garbage collection.
   system.autoUpgrade.enable = true;
-  nix.gc.automatic = true;
+  nix.gc = {
+    automatic = true;
+    options = "--delete-older-than 30d";
+  };
 
   # Enable Redshift.
   services.redshift = {
@@ -35,6 +39,12 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
+  
+  # Enable CUPS to print documents.
+  services.printing = {
+    enable = true;
+    drivers = [ pkgs.epson-escpr ];
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

@@ -8,6 +8,10 @@
   # Enable the KDE Desktop Environment.
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
+  
+  # Set Kernel Version & Add Modules.
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+  boot.extraModulePackages = with config.boot.kernelPackages; [ virtualbox ];
 
   # Install software.
   environment.systemPackages = with pkgs; [
@@ -20,12 +24,14 @@
     minecraft
     spotify
     steam
+    virtualbox
     vscode
     
     # Utilities
     ark
     firefox
     gimp
+    gwenview
     inkscape
     kate
     kdenlive
@@ -36,18 +42,23 @@
     neofetch
     papirus-icon-theme
     plasma-vault
+    skanlite
     spectacle
     vlc
 
     # Core Software
+    platformio
     ffmpeg-full
     frei0r
     git
     openjdk8
     python3
+    python2
     unzip
     wget
     wineStaging
-    atftp
+    
+    # Custom Software
+    (import ./HostLoaderApp/default.nix)
   ];
 }
