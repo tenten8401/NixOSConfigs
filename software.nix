@@ -59,6 +59,6 @@
     wineStaging
     
     # Custom Software
-    (import ./HostLoaderApp/default.nix)
+    (import ./packages/HostLoaderApp/default.nix)
   ];
 }
